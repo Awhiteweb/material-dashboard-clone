@@ -1,6 +1,10 @@
+import { Injectable } from "@angular/core"
 import { BehaviorSubject } from "rxjs";
 import { IOrder } from "./order";
 
+@Injectable({
+  providedIn: "root"
+})
 export class OrderService {
   private _orderListSubject$: BehaviorSubject<IOrder[]> = new BehaviorSubject<
     IOrder[]
