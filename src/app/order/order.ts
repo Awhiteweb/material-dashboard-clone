@@ -11,3 +11,15 @@ export interface IOrder {
   qty: number;
   status: OrderStatus;
 }
+
+export interface IOrderListResponse {
+  orders: IOrder[];
+  nextIndex: string;
+}
+
+export interface IOrderListFilter {
+  sort: string;
+  sort_desc: boolean;
+  pageCount: number;
+  search: string;
+}
